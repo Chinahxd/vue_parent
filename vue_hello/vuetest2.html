@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    var fun1=function (name) {
+        console.debug(name)
+    }
+    fun1("wanzi");
+    var fun2=(name)=>{
+        console.debug(name)
+    }
+    fun2("dongjie");
+
+    var fun3=name=>console.debug(name)
+
+    fun3("hxd");
+
+
+    var r={
+        "name":"hxd",
+        "r":function (v) {
+            console.debug(this.name+"你好呀"+v)
+        },
+        "w":(s)=> {
+           console.debug(this.name+"我还安好"+s)
+        },
+        "x"(f){
+            console.debug(this.name+"我挺好"+f)
+        }
+
+    }
+    r.r(1);
+    r.w(2);
+    r.x(3);
+
+    let student={"name":"hxd","age":19};
+    //创建一个yyy的箭头函数：参数： ({name})：会把传入的对象进行解构
+    let yyy = ({age})=>{console.log(age)};
+
+    yyy(student);//把传入的student对象的name解构赋值给yyy函数的name值：
+</script>
+
+</body>
+</html>

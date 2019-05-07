@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    const promise = new Promise((q,y)=>{
+        setTimeout(()=>{
+            var num=Math.random();
+            if(num>0.5){
+                console.debug("成功");
+                q("q"+num);
+            }else {
+                console.debug("失败");
+                y("y"+num);
+
+            }
+        },2000)
+    });
+    promise.then((q)=> {
+        console.debug(q)
+    }).catch((y)=> {
+        console.debug(y)
+    })
+</script>
+</body>
+</html>
